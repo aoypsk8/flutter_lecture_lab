@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:new_1/card.dart';
 import 'package:new_1/detail.dart';
+import 'package:new_1/model.dart';
 
 class Stack_Dart extends StatefulWidget {
   const Stack_Dart({Key? key}) : super(key: key);
@@ -56,17 +57,14 @@ class _Stack_DartState extends State<Stack_Dart> {
     return ListView.builder(
         itemCount: booklist.length,
         itemBuilder: (context, index) => CardBook(
-              title: booklist[index]['title'],
-              img: booklist[index]['img'],
-              year: booklist[index]['year'],
+              fmodel: bookModel(booklist[index]['title'],
+                  booklist[index]['img'], booklist[index]['year']),
               press: () => Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => DetailScreen(
-                    indexx: index,
-                    title: booklist[index]['title'],
-                    img: booklist[index]['img'],
-                    year: booklist[index]['year'],
+                    fmodel: bookModel(booklist[index]['title'],
+                        booklist[index]['img'], booklist[index]['year']),
                   ),
                 ),
               ),

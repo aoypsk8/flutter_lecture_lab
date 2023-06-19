@@ -1,18 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:new_1/model.dart';
 
 class DetailScreen extends StatefulWidget {
-  final String title;
-  final String img;
-  final int year;
-  final int indexx;
-  const DetailScreen(
-      {Key? key,
-      required this.title,
-      required this.img,
-      required this.year,
-      required this.indexx})
-      : super(key: key);
+  final bookModel fmodel;
+
+  const DetailScreen({
+    Key? key,
+    required this.fmodel,
+  }) : super(key: key);
 
   @override
   State<DetailScreen> createState() => _DetailScreenState();
@@ -33,7 +29,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 width: double.infinity,
                 child: ClipRRect(
                     child: Image.network(
-                  "${widget.img}",
+                  "${widget.fmodel.imgUrl}",
                   height: 450.0,
                   fit: BoxFit.contain,
                 )),
@@ -44,7 +40,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 child: Container(
                   margin: EdgeInsets.only(top: 30),
                   child: Text(
-                    "${widget.title}",
+                    "${widget.fmodel.bookName}",
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -55,7 +51,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 child: Container(
                   margin: EdgeInsets.only(top: 30),
                   child: Text(
-                    "Year ${widget.year}",
+                    "Year ${widget.fmodel.year}".toString(),
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 ),

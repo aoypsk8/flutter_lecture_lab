@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:new_1/model.dart';
 
 class CardBook extends StatefulWidget {
-  final String title;
-  final String img;
-  final int year;
+  final bookModel fmodel;
   final VoidCallback press;
   const CardBook(
       {Key? key,
-      required this.title,
-      required this.img,
-      required this.year,
-      required this.press})
+      required this.press, required this.fmodel})
       : super(key: key);
 
   @override
@@ -36,7 +32,7 @@ class _CardBookState extends State<CardBook> {
                     Container(
                       width: 100,
                       child: Image.network(
-                        widget.img,
+                        widget.fmodel.imgUrl,
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -47,7 +43,7 @@ class _CardBookState extends State<CardBook> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(widget.title,
+                            child: Text(widget.fmodel.bookName,
                                 style: const TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
@@ -55,7 +51,7 @@ class _CardBookState extends State<CardBook> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(widget.year.toString(),
+                            child: Text(widget.fmodel.year.toString(),
                                 style: const TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
