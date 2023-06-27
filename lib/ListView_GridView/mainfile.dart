@@ -13,32 +13,32 @@ class MainGridList extends StatefulWidget {
 class _MainGridListState extends State<MainGridList> {
   List<dynamic> booklist = [
     {
-      'title': 'Book Programming: (For JNTU, Kakinada)',
+      'title': 'Book Programming: (For Beginner, aoy phongsakoun)',
       'img':
           'https://th.bing.com/th/id/OIP.WEh-huEEvBRopdZAEPQDmQHaKc?pid=ImgDet&rs=1',
       'subdata': {
         'category1': {
-          'title': 'C Programming: (For JNTU, Kakinada)',
+          'title': 'C Programming',
           'img':
               'https://th.bing.com/th/id/OIP.WEh-huEEvBRopdZAEPQDmQHaKc?pid=ImgDet&rs=1',
           'year': 2017,
         },
         'category2': {
           'title':
-              'Core Java for Beginners: A Simplified Approach (Covers Java SE 13)',
+              'Core Java ',
           'img':
               'https://th.bing.com/th/id/OIP.rM8wR0w4vqVnpeUXp8uRzgHaJd?pid=ImgDet&rs=1',
           'year': 2019,
         },
         'category3': {
-          'title': 'The Python Book: The Ultimate Guide to Coding with Python',
+          'title': 'The Python ',
           'img':
               'https://th.bing.com/th/id/OIP.1AJSRkONXap-dJLVSC0YYgAAAA?pid=ImgDet&rs=1',
           'year': 2018,
         },
         'category4': {
           'title':
-              'R in the graphical capabilities of R for exploring, managing, and solving data visualization challenges',
+              'R ',
           'img':
               'https://th.bing.com/th/id/OIP.ud-8klePKT2G6NUe98bt5QHaKG?pid=ImgDet&rs=1',
           'year': 2017,
@@ -51,55 +51,55 @@ class _MainGridListState extends State<MainGridList> {
           'https://cdn.pixabay.com/photo/2016/03/23/15/00/ice-cream-1274894_640.jpg',
       'subdata': {
         'category1': {
-          'title': 'C Programming: (For JNTU, Kakinada)',
+          'title': 'Ice cream with bowl',
           'img':
               'https://cdn.pixabay.com/photo/2018/08/16/22/59/ice-cream-3611698_640.jpg',
           'year': 2017,
         },
         'category2': {
           'title':
-              'Core Java for Beginners: A Simplified Approach (Covers Java SE 13)',
+              'Bread with fruit',
           'img':
               'https://cdn.pixabay.com/photo/2016/10/31/18/14/dessert-1786311_640.jpg',
           'year': 2019,
         },
         'category3': {
-          'title': 'The Python Book: The Ultimate Guide to Coding with Python',
+          'title': 'Strawberry iceam',
           'img':
               'https://cdn.pixabay.com/photo/2017/04/18/15/10/strawberry-ice-cream-2239377_640.jpg',
           'year': 2018,
         },
         'category4': {
           'title':
-              'R in the graphical capabilities of R for exploring, managing, and solving data visualization challenges',
+              'Ice cream with bowl',
           'img':
               'https://cdn.pixabay.com/photo/2018/08/16/22/59/ice-cream-3611698_640.jpg',
           'year': 2017,
         },
         'category5': {
           'title':
-              'R in the graphical capabilities of R for exploring, managing, and solving data visualization challenges',
+              'Green Ice Cream',
           'img':
               'https://cdn.pixabay.com/photo/2016/01/11/07/18/cupcakes-1133146_640.jpg',
           'year': 2017,
         },
         'category6': {
           'title':
-              'R in the graphical capabilities of R for exploring, managing, and solving data visualization challenges',
+              'Ice Cream Cones',
           'img':
               'https://cdn.pixabay.com/photo/2021/01/18/12/49/ice-cream-5928048_640.jpg',
           'year': 2017,
         },
         'category7': {
           'title':
-              'R in the graphical capabilities of R for exploring, managing, and solving data visualization challenges',
+              'Ice Cream Cones',
           'img':
               'https://cdn.pixabay.com/photo/2015/05/17/13/12/ice-cream-770994_640.jpg',
           'year': 2017,
         },
         'category8': {
           'title':
-              'R in the graphical capabilities of R for exploring, managing, and solving data visualization challenges',
+              'Ice Cream Cones',
           'img':
               'https://cdn.pixabay.com/photo/2017/08/03/14/38/ice-cream-2576622_640.jpg',
           'year': 2017,
@@ -112,34 +112,34 @@ class _MainGridListState extends State<MainGridList> {
           'https://cdn.pixabay.com/photo/2022/11/17/08/38/cake-7597588_640.jpg',
       'subdata': {
         'category1': {
-          'title': 'C Programming: (For JNTU, Kakinada)',
+          'title': 'Fire rice',
           'img':
               'https://cdn.pixabay.com/photo/2017/07/16/11/49/menu-2509046_640.jpg',
           'year': 2017,
         },
         'category2': {
           'title':
-              'Core Java for Beginners: A Simplified Approach (Covers Java SE 13)',
+              'Fire rice crispy pork',
           'img':
               'https://cdn.pixabay.com/photo/2017/07/16/11/55/fried-2509080_640.jpg',
           'year': 2019,
         },
         'category3': {
-          'title': 'The Python Book: The Ultimate Guide to Coding with Python',
+          'title': 'Fruit Rice',
           'img':
               'https://cdn.pixabay.com/photo/2017/03/20/09/07/food-2158542_640.jpg',
           'year': 2018,
         },
         'category4': {
           'title':
-              'R in the graphical capabilities of R for exploring, managing, and solving data visualization challenges',
+              'rice',
           'img':
               'https://cdn.pixabay.com/photo/2019/01/22/15/57/onigiri-3948400_640.jpg',
           'year': 2017,
         },
         'category5': {
           'title':
-              'R in the graphical capabilities of R for exploring, managing, and solving data visualization challenges',
+              'Shrimp with sprout beem',
           'img':
               'https://cdn.pixabay.com/photo/2017/08/10/08/39/snow-crab-2620060_1280.jpg',
           'year': 2017,

@@ -35,8 +35,26 @@ class _Grid_listState extends State<Grid_list> {
             final title = category['title'];
             final img = category['img'];
             final year = category['year'];
-            return Card(
-              child: Image.network(img,fit: BoxFit.cover,),
+            return Container(
+              height: 200,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 170,
+                    width: double.infinity,
+                    child: Image.network(
+                      img,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Expanded(child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(title),
+                  ))
+                ],
+              ),
             );
           },
         ),
