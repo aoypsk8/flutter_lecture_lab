@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_1/list_view.dart';
+import 'package:new_1/ListView_GridView/mainfile.dart';
 import 'package:new_1/stack.dart';
 
 void main() {
@@ -31,10 +31,14 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 5,
-        title:const Text("LIstview and Stack",style: TextStyle(color: Color.fromARGB(255, 0, 0, 0),fontWeight:FontWeight.bold),),
-        backgroundColor: Color.fromARGB(190, 34, 203, 43),
+        title: const Text(
+          "GridPage",
+          style: TextStyle(
+              color: Color.fromARGB(255, 0, 0, 0), fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Color.fromARGB(189, 52, 255, 167),
       ),
-      body: Stack_Dart(),
+      body: MainGridList()
     );
   }
 }

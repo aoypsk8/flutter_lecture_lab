@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:new_1/model.dart';
+import 'package:new_1/ListView_GridView/model_list_grid.dart';
 
-class CardBook extends StatefulWidget {
-  final bookModel fmodel;
+class CardList extends StatefulWidget {
+  final listModel fmodel;
   final VoidCallback press;
-  const CardBook(
+  const CardList(
       {Key? key,
       required this.press, required this.fmodel})
       : super(key: key);
 
   @override
-  State<CardBook> createState() => _CardBookState();
+  State<CardList> createState() => _CardListState();
 }
 
-class _CardBookState extends State<CardBook> {
+class _CardListState extends State<CardList> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -34,7 +34,7 @@ class _CardBookState extends State<CardBook> {
                       height: double.infinity,
                       child: Image.network(
                         widget.fmodel.imgUrl,
-                        fit: BoxFit.fill,
+                        fit: BoxFit.cover,
                       ),
                     ),
                     Expanded(
@@ -50,14 +50,7 @@ class _CardBookState extends State<CardBook> {
                                     fontWeight: FontWeight.bold,
                                     color: Color.fromARGB(255, 0, 0, 0))),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(widget.fmodel.year.toString(),
-                                style: const TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromARGB(255, 0, 0, 0))),
-                          ),
+                          
                         ],
                       ),
                     )
