@@ -4,9 +4,7 @@ import 'package:new_1/ListView_GridView/model_list_grid.dart';
 class CardList extends StatefulWidget {
   final listModel fmodel;
   final VoidCallback press;
-  const CardList(
-      {Key? key,
-      required this.press, required this.fmodel})
+  const CardList({Key? key, required this.press, required this.fmodel})
       : super(key: key);
 
   @override
@@ -19,7 +17,6 @@ class _CardListState extends State<CardList> {
     return InkWell(
       onTap: widget.press,
       child: Card(
-        
         elevation: 5,
         child: Container(
           height: 140,
@@ -32,9 +29,15 @@ class _CardListState extends State<CardList> {
                     Container(
                       width: 100,
                       height: double.infinity,
-                      child: Image.network(
-                        widget.fmodel.imgUrl,
-                        fit: BoxFit.cover,
+                      child: ClipRRect(
+                        borderRadius:const  BorderRadius.only(
+                          topLeft: Radius.circular(5.0),
+                          bottomLeft: Radius.circular(5.0),
+                        ),
+                        child: Image.network(
+                          widget.fmodel.imgUrl,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                     Expanded(
@@ -50,7 +53,6 @@ class _CardListState extends State<CardList> {
                                     fontWeight: FontWeight.bold,
                                     color: Color.fromARGB(255, 0, 0, 0))),
                           ),
-                          
                         ],
                       ),
                     )
