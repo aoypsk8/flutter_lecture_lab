@@ -158,7 +158,6 @@ class _MainGridListState extends State<MainGridList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[200],
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -169,7 +168,8 @@ class _MainGridListState extends State<MainGridList> {
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 height: 50,
                 decoration: BoxDecoration(
-                    color: Colors.white, borderRadius: BorderRadius.circular(30)),
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(30)),
                 child: Row(
                   children: [
                     Container(
@@ -197,26 +197,39 @@ class _MainGridListState extends State<MainGridList> {
                 ),
               ),
             ),
-            Container(
-              width: double.infinity,
-              child: ListView.builder(
+            if (searchResults.isEmpty)
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: Container(
+                  child: Center(
+                    child: Text('No results found.'),
+                  ),
+                ),
+              )
+            else
+              Container(
+                width: double.infinity,
+                child: ListView.builder(
                   shrinkWrap: true,
                   itemCount: searchResults.length,
                   itemBuilder: (context, index) => Container(
-                        child: CardList(
-                          fmodel: listModel(
-                              searchResults[index]['title'], searchResults[index]['img']),
-                          press: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Grid_list(
-                                bookData: searchResults[index],
-                              ),
-                            ),
+                    child: CardList(
+                      fmodel: listModel(
+                        searchResults[index]['title'],
+                        searchResults[index]['img'],
+                      ),
+                      press: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Grid_list(
+                            bookData: searchResults[index],
                           ),
                         ),
-                      )),
-            ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
           ],
         ),
       ),
